@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #FFD700;
+  --secondary: #444;
+  --white: #fff;
+  --primer: #FFC300;
+  --gradient: linear-gradient(to bottom, #FFC300, #FFD700);
+  --gradient-rev: linear-gradient(to bottom, #FFD700, #FFC300);
+  --font-header: 'Open Sans', sans-serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  color: var(--secondary);
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: var(--secondary);
+  color: white;
+  z-index: 100;
+  text-decoration: none;
+
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-image: var(--gradient);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.app-bar-outer {
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-image: var(--gradient);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--white);
+  padding: 8px 12px;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-header);
+}
+
+.app-bar .app-bar__brand h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-image: var(--gradient-rev);
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 12px;
+}
+
+/*
+  Main Content
+*/
+
+main {
+  /* padding: 24px; */
+  flex: 1;
+}
+
+.hero-image {
+  margin: 0px auto -32px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 24px;
+  margin: 0px auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.content .heading-hr {
+  width: 30%;
+  margin: auto;
+  border: 1px solid var(--primary);
+}
+
+
+/*
+  Movies
+*/
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+
+/*
+  Movie Item
+*/
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: var(--secondary);
+  color: white;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-width: 70px;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  text-decoration: none;
+  color: #FFC300;
+  padding: 12px 0px;
+}
+
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  font-weight: 400;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+
+.restaurant__overview .restaurant-desc {
+  margin-bottom: 18px;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 18px;
+  margin: 12px 0;
+}
+
+.grid-menu ul {
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 12px 32px;
+}
+
+.review-item {
+  border: 1px solid var(--primary);
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.review-item .review-date {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.font-header {
+  font-family: var(--font-header);
+  font-weight: 600;
+}
+
+/*
+  Movie
+*/
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: var(--primer);
+  text-decoration: none;
+  padding: 14px 0px;
+}
