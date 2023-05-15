@@ -5,6 +5,7 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
 module.exports = {
@@ -59,5 +60,6 @@ module.exports = {
       overrideExtension: true,
     }),
     new MiniCssExtractPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 };
