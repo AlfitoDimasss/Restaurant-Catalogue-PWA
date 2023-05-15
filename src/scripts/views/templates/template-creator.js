@@ -36,7 +36,7 @@ const createCategories = (categories) => {
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title font-header">${restaurant.name}</h2>
-  <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+  <img class="restaurant__poster lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
   <div class="restaurant__info">
     <h3 class="font-header">Information</h3>
     <h4 class="font-header">Address</h4>
@@ -65,8 +65,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}"
-           src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" crossorigin="anonymous">
+      <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}"
+           data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" crossorigin="anonymous">
       <div class="restaurant-item__header__rating">
         <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
