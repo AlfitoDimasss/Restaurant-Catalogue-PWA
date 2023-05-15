@@ -5,6 +5,13 @@ import CacheHelper from './utils/cache-helper';
 const assetsToCache = [
   './',
   './heros/hero-image_2.jpg',
+  './heros/hero-image_2.webp',
+  './heros/hero-image_2-large.jpg',
+  './heros/hero-image_2-large.webp',
+  './heros/hero-image_2-medium.jpg',
+  './heros/hero-image_2-medium.webp',
+  './heros/hero-image_2-small.jpg',
+  './heros/hero-image_2-small.webp',
   './icons/icon-72x72.png',
   './icons/icon-96x96.png',
   './icons/icon-128x128.png',
