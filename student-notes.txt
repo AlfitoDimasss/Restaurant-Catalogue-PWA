@@ -1,0 +1,13 @@
+Halo Kakak-kakak reviewer. Sebelumnya terima kasih sudah mereview submission saya ini.
+Disini saya ingin memberi tahu beberapa hal yang saya kerjakan pada submission ini beserta kekurangannya.
+
+Pertama, submission ini sudah menerapkan semua syarat utama submission dan sudah saya coba test dan hasilnya sesuai.
+
+Kedua, dari beberapa saran yang dapat diterapkan, saya hanya menerapkan penggunaan minify CSS menggunakan plugin MiniCssExtractPlugin dan CssMinimizerPlugin
+
+Terakhir, terdapat kekurangan yang saya sadari yaitu pada Dev-Tool manifest, terdapat peringatan bahwa proyek ini tidak dapat berjalan offline, yang
+saya sadari setelah menggunakan metode code-splitting. Saya sudah mencari solusinya di forum diskusi dan internet namun tidak ketemu jawabannya.
+Namun apabila tidak menggunakan code-splitting, semua konsep PWA berjalan normal (bisa di cek di branch minify-css). Saya tidak tahu bagaimana solusinya,
+dan harapan saya dengan mengumpulkan proyek ini seadanya, kakak-kakak reviewer bisa memberikan solusi masalah tersebut.
+
+Terima kasih.
